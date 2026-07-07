@@ -22,28 +22,28 @@ export type LogoItem = {
 
 export const logos: LogoItem[] = [
   {
-    src: '/logos/qualiopi.svg',
+    src: '/logos/qualiopi.png',
     name: 'Qualiopi — processus certifié',
     href: 'https://travail-emploi.gouv.fr/qualiopi-marque-de-certification-qualite-des-prestataires-de-formation',
     qualiopi: true,
   },
   {
-    src: '/logos/spr.svg',
+    src: '/logos/spr.png',
     name: 'Syndicat Professionnel des Réflexologues (SPR)',
     href: 'https://www.sp-reflexologues.org', // à vérifier
   },
   {
-    src: '/logos/rien.svg',
+    src: '/logos/rien.png',
     name: 'Reflexology in Europe Nexus (RIEN)',
     href: 'https://reflexology-europe.org', // à vérifier
   },
   {
-    src: '/logos/rof.svg',
+    src: '/logos/rof.png',
     name: 'Registre des Ostéopathes de France',
     href: 'https://www.osteopathie.org', // à vérifier
   },
   {
-    src: '/logos/sfdo.svg',
+    src: '/logos/sfdo.png',
     name: 'Syndicat Français Des Ostéopathes (SFDO)',
     href: 'https://www.osteopathe-syndicat.fr', // à vérifier
   },

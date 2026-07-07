@@ -1,23 +1,33 @@
 # Logos de reconnaissance / affiliation
 
-Les fichiers `.svg` de ce dossier sont des **espaces réservés** (placeholders).
-Remplacez chacun par le logo officiel fourni par l'organisme concerné :
+Les fichiers `.png` de ce dossier sont des **espaces réservés** (placeholders).
+Remplacez chacun par le logo officiel fourni par l'organisme, **en conservant
+le même nom de fichier** :
 
 | Fichier | Organisme |
 |---|---|
-| `qualiopi.svg` | Qualiopi — certification qualité de la formation |
-| `spr.svg` | Syndicat Professionnel des Réflexologues (SPR) |
-| `rien.svg` | Reflexology in Europe Nexus (RIEN) |
-| `rof.svg` | Registre des Ostéopathes de France |
-| `sfdo.svg` | Syndicat Français Des Ostéopathes (SFDO) |
+| `qualiopi.png` | Qualiopi — certification qualité de la formation |
+| `spr.png` | Syndicat Professionnel des Réflexologues (SPR) |
+| `rien.png` | Reflexology in Europe Nexus (RIEN) |
+| `rof.png` | Registre des Ostéopathes de France |
+| `sfdo.png` | Syndicat Français Des Ostéopathes (SFDO) |
 
 ## Comment remplacer
 
-- **Idéal : format SVG** — déposez le fichier officiel sous le même nom
-  (`qualiopi.svg`, etc.) et rien d'autre à faire.
-- **Fichier PNG/JPG** — déposez-le dans ce dossier puis mettez à jour le champ
-  `src` correspondant dans `content/logos.ts` (ex. `/logos/qualiopi.png`).
-  Préférez un PNG à fond transparent, largeur ≥ 480 px.
+Déposez le fichier officiel dans ce dossier sous le **même nom** (`qualiopi.png`,
+etc.) — rien d'autre à faire, il s'affiche automatiquement.
+
+- Format **PNG à fond transparent** de préférence, largeur **≥ 400 px** (les
+  écrans « retina » affichent le logo à ~180 px : viser 2× pour rester net).
+- Éviter le JPG (pas de transparence : halo blanc sur le fond parchemin).
+- Un logo officiel en **SVG** convient aussi : déposez-le puis changez
+  l'extension du `src` correspondant dans `content/logos.ts` (ex. `.svg`).
+
+## Liens
+
+Chaque logo pointe vers le site officiel de l'organisme (défini par `href`
+dans `content/logos.ts`). Les URL actuelles sont **présumées** et marquées
+« à vérifier » : confirmez-les avant la mise en production.
 
 ## Règles d'usage
 
