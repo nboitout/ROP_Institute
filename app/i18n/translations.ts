@@ -69,6 +69,10 @@ const fr = {
     ctaLbl: 'Nous rejoindre',
     ctaTitle: 'Professionnel de santé ? La prochaine session vous attend.',
     ctaBtn: 'Nous contacter',
+    recoLbl: 'Reconnaissances & affiliations',
+    recoTitle: 'Une formation <em>certifiée</em>, un réseau reconnu',
+    recoIntro: 'L\'institut est certifié Qualiopi et ses enseignants sont affiliés aux principales organisations professionnelles de la réflexologie et de l\'ostéopathie.',
+    qualiopiMention: 'La certification qualité a été délivrée au titre de la catégorie d\'action suivante : actions de formation.',
   },
   common: {
     home: 'Accueil',
@@ -157,6 +161,10 @@ const en: typeof fr = {
     ctaLbl: 'Join us',
     ctaTitle: 'A healthcare professional? The next session awaits you.',
     ctaBtn: 'Contact us',
+    recoLbl: 'Recognition & affiliations',
+    recoTitle: 'A <em>certified</em> training, a recognised network',
+    recoIntro: 'The institute is Qualiopi-certified and its teachers are affiliated with the leading professional organisations of reflexology and osteopathy.',
+    qualiopiMention: 'The quality certification was awarded for the following category of action: training actions.',
   },
   common: {
     home: 'Home',

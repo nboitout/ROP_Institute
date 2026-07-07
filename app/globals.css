@@ -258,6 +258,25 @@ a.card:hover { transform:translateY(-4px); box-shadow:0 14px 34px rgba(26,26,24,
 .eco-card p { font-size:.86rem; color:rgba(245,240,232,.68); margin-top:6px; }
 .eco-card .card-link { display:inline-block; margin-top:16px; font-size:.68rem; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-l); }
 
+/* ---------- RECOGNITION / LOGOS ---------- */
+.reco-logos {
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+  gap:20px 40px; margin:0 auto;
+}
+.reco-logo {
+  display:flex; align-items:center; justify-content:center;
+  height:72px; flex:0 0 auto; text-decoration:none;
+}
+.reco-logo img {
+  max-height:72px; width:auto; max-width:180px; object-fit:contain;
+  filter:grayscale(1); opacity:.72; transition:filter .25s, opacity .25s, transform .25s;
+}
+.reco-logo:hover img { filter:grayscale(0); opacity:1; transform:translateY(-2px); }
+.qualiopi-mention {
+  margin:24px auto 0; max-width:640px; text-align:center;
+  font-size:.72rem; line-height:1.5; color:var(--i30);
+}
+
 /* ---------- BOOKS ---------- */
 .book-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; }
 .book-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:26px 24px; }

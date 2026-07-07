@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useLanguage } from './i18n/LanguageContext'
+import { logos } from '@/content/logos'
 
 export default function HomePage() {
   const { t } = useLanguage()
@@ -118,6 +119,31 @@ export default function HomePage() {
             ),
           )}
         </div>
+      </section>
+
+      {/* RECOGNITION & AFFILIATIONS */}
+      <section className="parch" style={{ textAlign: 'center' }}>
+        <div className="sec-head" style={{ maxWidth: 680, margin: '0 auto 32px' }}>
+          <div className="lbl ctr">{h.recoLbl}</div>
+          <h2 dangerouslySetInnerHTML={{ __html: h.recoTitle }} />
+          <p>{h.recoIntro}</p>
+        </div>
+        <div className="reco-logos">
+          {logos.map((logo) =>
+            logo.href ? (
+              <a href={logo.href} rel="noopener" className="reco-logo" key={logo.src}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={logo.src} alt={logo.name} />
+              </a>
+            ) : (
+              <span className="reco-logo" key={logo.src}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={logo.src} alt={logo.name} />
+              </span>
+            ),
+          )}
+        </div>
+        <p className="qualiopi-mention">{h.qualiopiMention}</p>
       </section>
 
       {/* CTA */}
