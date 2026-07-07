@@ -260,21 +260,24 @@ a.card:hover { transform:translateY(-4px); box-shadow:0 14px 34px rgba(26,26,24,
 
 /* ---------- RECOGNITION / LOGOS ---------- */
 .reco-logos {
-  display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
-  gap:20px 40px; margin:0 auto;
+  display:flex; flex-wrap:wrap; align-items:stretch; justify-content:center;
+  gap:16px; margin:0 auto; max-width:940px;
 }
 .reco-logo {
   display:flex; align-items:center; justify-content:center;
-  height:72px; flex:0 0 auto; text-decoration:none;
+  flex:0 0 auto; width:172px; height:104px; padding:16px 20px;
+  background:#fff; border:1px solid var(--border); border-radius:8px;
+  box-shadow:0 4px 14px rgba(26,26,24,.05); text-decoration:none;
+  transition:transform .2s, box-shadow .2s;
 }
-.reco-logo img {
-  max-height:72px; width:auto; max-width:180px; object-fit:contain;
-  filter:grayscale(1); opacity:.72; transition:filter .25s, opacity .25s, transform .25s;
-}
-.reco-logo:hover img { filter:grayscale(0); opacity:1; transform:translateY(-2px); }
+a.reco-logo:hover { transform:translateY(-3px); box-shadow:0 12px 26px rgba(26,26,24,.1); }
+.reco-logo img { max-height:100%; max-width:100%; width:auto; object-fit:contain; }
 .qualiopi-mention {
-  margin:24px auto 0; max-width:640px; text-align:center;
+  margin:26px auto 0; max-width:640px; text-align:center;
   font-size:.72rem; line-height:1.5; color:var(--i30);
+}
+@media (max-width: 860px) {
+  .reco-logo { width:132px; height:84px; padding:12px 14px; }
 }
 
 /* ---------- BOOKS ---------- */
