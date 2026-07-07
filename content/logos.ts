@@ -1,10 +1,16 @@
 // Logos de reconnaissance / affiliation affichés sur la page d'accueil.
 //
 // IMPORTANT — les fichiers dans /public/logos/ sont des ESPACES RÉSERVÉS.
-// Remplacer chaque fichier par le logo officiel fourni par l'organisme, en
-// conservant le même nom de fichier (les officiels sont souvent des .png :
-// dans ce cas, déposer le .png et mettre à jour l'extension dans `src` ci-dessous).
-// Respecter les chartes d'usage de chaque marque (notamment Qualiopi).
+// Remplacer chaque fichier par le logo officiel fourni par l'organisme.
+//   • Format idéal : SVG officiel (vectoriel, net à toute taille, se recolore
+//     proprement pour l'effet niveaux-de-gris → couleur au survol).
+//   • À défaut : PNG à fond TRANSPARENT, largeur ≥ 400 px (éviter le JPG).
+// On peut mélanger les formats : chaque entrée porte son propre `src`.
+// Pour un PNG, changer simplement l'extension du `src` ci-dessous
+// (ex. '/logos/qualiopi.png'). Respecter la charte d'usage de chaque marque.
+//
+// ⚠️ Les URL `href` ci-dessous sont les sites officiels présumés : À VÉRIFIER
+// avant la mise en production (ne pas publier un lien erroné).
 
 export type LogoItem = {
   src: string
@@ -15,9 +21,30 @@ export type LogoItem = {
 }
 
 export const logos: LogoItem[] = [
-  { src: '/logos/qualiopi.svg', name: 'Qualiopi — processus certifié', qualiopi: true },
-  { src: '/logos/spr.svg', name: 'Syndicat Professionnel des Réflexologues (SPR)' },
-  { src: '/logos/rien.svg', name: 'Reflexology in Europe Nexus (RIEN)' },
-  { src: '/logos/rof.svg', name: 'Registre des Ostéopathes de France' },
-  { src: '/logos/sfdo.svg', name: 'Syndicat Français Des Ostéopathes (SFDO)' },
+  {
+    src: '/logos/qualiopi.svg',
+    name: 'Qualiopi — processus certifié',
+    href: 'https://travail-emploi.gouv.fr/qualiopi-marque-de-certification-qualite-des-prestataires-de-formation',
+    qualiopi: true,
+  },
+  {
+    src: '/logos/spr.svg',
+    name: 'Syndicat Professionnel des Réflexologues (SPR)',
+    href: 'https://www.sp-reflexologues.org', // à vérifier
+  },
+  {
+    src: '/logos/rien.svg',
+    name: 'Reflexology in Europe Nexus (RIEN)',
+    href: 'https://reflexology-europe.org', // à vérifier
+  },
+  {
+    src: '/logos/rof.svg',
+    name: 'Registre des Ostéopathes de France',
+    href: 'https://www.osteopathie.org', // à vérifier
+  },
+  {
+    src: '/logos/sfdo.svg',
+    name: 'Syndicat Français Des Ostéopathes (SFDO)',
+    href: 'https://www.osteopathe-syndicat.fr', // à vérifier
+  },
 ]

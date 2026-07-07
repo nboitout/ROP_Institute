@@ -131,7 +131,7 @@ export default function HomePage() {
         <div className="reco-logos">
           {logos.map((logo) =>
             logo.href ? (
-              <a href={logo.href} rel="noopener" className="reco-logo" key={logo.src}>
+              <a href={logo.href} target="_blank" rel="noopener noreferrer" className="reco-logo" key={logo.src}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={logo.src} alt={logo.name} />
               </a>
