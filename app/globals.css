@@ -154,15 +154,17 @@ section.sage { background:var(--sage); color:var(--cream); }
     var(--surface);
   position:relative; overflow:hidden; border-bottom:1px solid var(--border);
 }
-/* Courbes de niveau — signature « cartographie réflexe » de l'Institut. */
+/* Courbes de niveau — signature « cartographie réflexe » de l'Institut.
+   Cantonnée au flanc droit et estompée vers le texte (masque radial), pour
+   que le titre, l'accroche et les chiffres reposent sur un fond propre. */
 .home-hero::before {
-  content:''; position:absolute; inset:0; opacity:.5; pointer-events:none;
-  background-position:center; background-size:cover; background-repeat:no-repeat;
-  background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20400'%20preserveAspectRatio='xMidYMid%20slice'%3E%3Cg%20fill='none'%20stroke='%231c4a4f'%20stroke-width='1.1'%3E%3Cpath%20d='M-20%20120C220%2070%20360%20180%20560%20150%20760%20120%20900%2040%201220%2090'/%3E%3Cpath%20d='M-20%20175C220%20130%20370%20240%20560%20210%20760%20180%20900%20105%201220%20155'/%3E%3Cpath%20d='M-20%20235C220%20190%20380%20300%20560%20270%20760%20240%20905%20168%201220%20220'/%3E%3Cpath%20d='M-20%20300C220%20255%20385%20365%20560%20335%20760%20305%20910%20232%201220%20286'/%3E%3Cpath%20d='M-20%20365C220%20322%20390%20428%20560%20398%20760%20368%20915%20300%201220%20356'/%3E%3C/g%3E%3Cg%20fill='%231c4a4f'%3E%3Ccircle%20cx='560'%20cy='210'%20r='3'/%3E%3Ccircle%20cx='905'%20cy='168'%20r='2.4'/%3E%3C/g%3E%3C/svg%3E");
+  content:''; position:absolute; top:0; bottom:0; right:0; left:auto; width:56%;
+  opacity:.55; pointer-events:none;
+  background-position:right center; background-size:cover; background-repeat:no-repeat;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20460'%20preserveAspectRatio='xMidYMid%20slice'%3E%3Cg%20fill='none'%20stroke='%231c4a4f'%20stroke-width='1'%3E%3Cpath%20d='M-20%20150C160%20110%20300%20150%20440%20135%20620%20116%20760%2050%20940%2085'/%3E%3Cpath%20d='M-20%20205C160%20165%20305%20205%20450%20190%20630%20171%20770%20105%20950%20140'/%3E%3Cpath%20d='M-20%20262C160%20222%20310%20262%20460%20247%20640%20228%20780%20162%20960%20197'/%3E%3Cpath%20d='M-20%20320C160%20280%20315%20320%20470%20305%20650%20286%20790%20220%20970%20255'/%3E%3Cpath%20d='M-20%20380C160%20340%20320%20380%20480%20365%20660%20346%20800%20280%20980%20315'/%3E%3C/g%3E%3Cg%20fill='%231c4a4f'%3E%3Ccircle%20cx='630'%20cy='171'%20r='2.6'/%3E%3Ccircle%20cx='650'%20cy='286'%20r='2'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-image:radial-gradient(120% 92% at 100% 30%, #000 26%, rgba(0,0,0,0) 78%);
+  mask-image:radial-gradient(120% 92% at 100% 30%, #000 26%, rgba(0,0,0,0) 78%);
 }
-/* Repère cartographique (ex-orbe) — petit point de réflexe. */
-.hero-orb { position:absolute; top:34px; left:34px; width:88px; height:88px; border:1px solid rgba(28,74,79,.18); border-radius:50%; }
-.hero-orb::after { content:''; position:absolute; inset:8px; border:1px solid rgba(28,74,79,.12); border-radius:50%; }
 .home-hero > * { position:relative; z-index:1; }
 .hero-badge {
   display:inline-block; margin-bottom:18px;
@@ -322,4 +324,11 @@ a.reco-logo:hover { transform:translateY(-3px); box-shadow:0 12px 26px rgba(26,2
   .f-grid { grid-template-columns:1fr; gap:26px; }
   .eco-grid { grid-template-columns:1fr; }
   .hero-fact { padding-right:22px; margin-right:22px; }
+  /* Sur mobile, le texte occupe toute la largeur : on réduit le motif à une
+     discrète frange haute pour ne pas croiser le titre empilé. */
+  .home-hero::before {
+    width:100%; opacity:.3;
+    -webkit-mask-image:radial-gradient(150% 62% at 100% 0%, #000 18%, rgba(0,0,0,0) 72%);
+    mask-image:radial-gradient(150% 62% at 100% 0%, #000 18%, rgba(0,0,0,0) 72%);
+  }
 }

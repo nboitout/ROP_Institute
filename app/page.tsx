@@ -12,7 +12,6 @@ export default function HomePage() {
     <main style={{ paddingTop: 0 }}>
       {/* HERO */}
       <div className="home-hero" style={{ marginTop: 62 }}>
-        <div className="hero-orb" aria-hidden />
         <span className="hero-badge">{h.badge}</span>
         <h1 dangerouslySetInnerHTML={{ __html: h.title }} />
         <p className="hero-sub">{h.sub}</p>
