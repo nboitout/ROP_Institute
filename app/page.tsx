@@ -17,10 +17,10 @@ export default function HomePage() {
         <h1 dangerouslySetInnerHTML={{ __html: h.title }} />
         <p className="hero-sub">{h.sub}</p>
         <div className="hero-ctas">
-          <Link href="/methode" className="btn b-gold">
+          <Link href="/methode" className="btn b-sage">
             {h.cta1}
           </Link>
-          <Link href="/formations" className="btn b-ghost">
+          <Link href="/formations" className="btn b-out">
             {h.cta2}
           </Link>
         </div>
