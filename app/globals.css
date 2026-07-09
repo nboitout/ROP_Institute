@@ -148,6 +148,17 @@ section.sage { background:var(--sage); color:var(--cream); }
 
 /* ---------- HERO (home) — clair, orienté crédibilité, motif cartographique ---------- */
 .home-hero {
+  /* Signature du hero en BLEU CLINIQUE, distincte du sauge/pétrole du reste
+     du site (et du livre guy-boitout.com). Redéfinir ces variables ici suffit
+     à recolorer badge, accent de titre, chiffres et boutons DANS le hero,
+     sans toucher à la palette du reste du site. Pour revenir au pétrole,
+     supprimer ce bloc ; pour l'étendre à tout le site, déplacer ces valeurs
+     dans :root. */
+  --petrol:      #1c3f66;
+  --petrol-dark: #142c49;
+  --petrol-mid:  #2f5f8a;
+  --petrol-pale: #e7edf4;
+
   padding:96px 72px 72px; color:var(--ink);
   background:
     radial-gradient(ellipse at 92% 6%, var(--petrol-pale) 0%, transparent 55%),
@@ -161,7 +172,7 @@ section.sage { background:var(--sage); color:var(--cream); }
   content:''; position:absolute; top:0; bottom:0; right:0; left:auto; width:56%;
   opacity:.55; pointer-events:none;
   background-position:right center; background-size:cover; background-repeat:no-repeat;
-  background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20460'%20preserveAspectRatio='xMidYMid%20slice'%3E%3Cg%20fill='none'%20stroke='%231c4a4f'%20stroke-width='1'%3E%3Cpath%20d='M-20%20150C160%20110%20300%20150%20440%20135%20620%20116%20760%2050%20940%2085'/%3E%3Cpath%20d='M-20%20205C160%20165%20305%20205%20450%20190%20630%20171%20770%20105%20950%20140'/%3E%3Cpath%20d='M-20%20262C160%20222%20310%20262%20460%20247%20640%20228%20780%20162%20960%20197'/%3E%3Cpath%20d='M-20%20320C160%20280%20315%20320%20470%20305%20650%20286%20790%20220%20970%20255'/%3E%3Cpath%20d='M-20%20380C160%20340%20320%20380%20480%20365%20660%20346%20800%20280%20980%20315'/%3E%3C/g%3E%3Cg%20fill='%231c4a4f'%3E%3Ccircle%20cx='630'%20cy='171'%20r='2.6'/%3E%3Ccircle%20cx='650'%20cy='286'%20r='2'/%3E%3C/g%3E%3C/svg%3E");
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20460'%20preserveAspectRatio='xMidYMid%20slice'%3E%3Cg%20fill='none'%20stroke='%231c3f66'%20stroke-width='1'%3E%3Cpath%20d='M-20%20150C160%20110%20300%20150%20440%20135%20620%20116%20760%2050%20940%2085'/%3E%3Cpath%20d='M-20%20205C160%20165%20305%20205%20450%20190%20630%20171%20770%20105%20950%20140'/%3E%3Cpath%20d='M-20%20262C160%20222%20310%20262%20460%20247%20640%20228%20780%20162%20960%20197'/%3E%3Cpath%20d='M-20%20320C160%20280%20315%20320%20470%20305%20650%20286%20790%20220%20970%20255'/%3E%3Cpath%20d='M-20%20380C160%20340%20320%20380%20480%20365%20660%20346%20800%20280%20980%20315'/%3E%3C/g%3E%3Cg%20fill='%231c3f66'%3E%3Ccircle%20cx='630'%20cy='171'%20r='2.6'/%3E%3Ccircle%20cx='650'%20cy='286'%20r='2'/%3E%3C/g%3E%3C/svg%3E");
   -webkit-mask-image:radial-gradient(120% 92% at 100% 30%, #000 26%, rgba(0,0,0,0) 78%);
   mask-image:radial-gradient(120% 92% at 100% 30%, #000 26%, rgba(0,0,0,0) 78%);
 }
@@ -170,8 +181,10 @@ section.sage { background:var(--sage); color:var(--cream); }
   display:inline-block; margin-bottom:18px;
   font-size:.67rem; font-weight:500; letter-spacing:.22em; text-transform:uppercase;
   color:var(--petrol-mid); background:var(--petrol-pale);
-  border:1px solid rgba(28,74,79,.28); padding:6px 16px; border-radius:2px;
+  border:1px solid rgba(28,63,102,.28); padding:6px 16px; border-radius:2px;
 }
+/* Ombre du bouton primaire accordée au bleu du hero. */
+.home-hero .b-sage { box-shadow:0 4px 16px rgba(28,63,102,.26); }
 .home-hero h1 { color:var(--ink); max-width:860px; margin-bottom:16px; }
 .home-hero h1 em { color:var(--petrol-mid); }
 .hero-sub {
